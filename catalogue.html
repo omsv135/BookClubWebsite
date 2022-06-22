@@ -125,7 +125,7 @@
   <script>
       $.getJSON("./data.json", function (data){
        $.each(data, function(idx, val) {
-        let s = "<tr><td>" + idx + "</td><td>" +  val.fields.Title + "</td><td>" + val.fields.Author + "</td><td>" + val.fields.Genre + "</td></tr>\n";
+        let s = "<tr><td>" + (idx+1).toString() + "</td><td>" +  val.fields.Title + "</td><td>" + val.fields.Author + "</td><td>" + val.fields.Genre + "</td></tr>\n";
         $(s).appendTo("#catalogue tbody")
         });
       });
